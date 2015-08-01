@@ -14,6 +14,7 @@ $ npm i extend-file --save
 
 * [Usage](#usage)
 * [CLI](#cli)
+  - [data](#data)
 * [Related projects](#related-projects)
 * [Running tests](#running-tests)
 * [Contributing](#contributing)
@@ -42,7 +43,7 @@ $ expand-file package.json [data]
                  ^
 ```
 
-**data**
+### data
 
 Specify the data to use for extending the file.
 
@@ -53,17 +54,29 @@ $ expand-file package.json [data]
 
 Data may be specified using one of the following flags:
 
-* `-d` or  `--data`: specify a string to expand with [expand-object]
+* `-d` or  `--data`: specify a string to expand with [expand-object](https://github.com/jonschlinkert/expand-object)
 * `-f` or  `--file`: specify a JSON or YAML file to use for data
 
-Example:
+**Pass an object**
+
+Use the object expansion syntax supported by [expand-object](https://github.com/jonschlinkert/expand-object):
 
 ```sh
 $ expand-file package.json -d "a.b.c:foo,bar,baz"
 #=> "a":{"b":{"c":["foo","bar","baz"]}}}
 ```
 
-Return issues related to `--data` expansion on the [expand-object] repo.
+Any issues related to `--data` expansion should be created on the [expand-object](https://github.com/jonschlinkert/expand-object)repo.
+
+**Specify a JSON or YAML file**
+
+Use the contents of another file to extend the first file.
+
+```sh
+$ expand-file package.json -f foo.yml
+```
+
+JSON and YAML are supported.
 
 ## Related projects
 
