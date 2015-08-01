@@ -1,7 +1,7 @@
 {
   "name": "extend-file",
   "description": "Extend a JSON file with additional properties, API and CLI.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/extend-file",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/extend-file",
