@@ -1,0 +1,54 @@
+{
+  "name": "extend-file",
+  "description": "Extend a JSON file with additional properties, API and CLI.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/extend-file",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/extend-file",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/extend-file/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "expand-object": "^0.2.3",
+    "minimist": "^1.1.2",
+    "mixin-deep": "^1.1.1",
+    "read-data": "^0.3.0",
+    "write": "^0.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "assign",
+    "expand",
+    "extend",
+    "file",
+    "json",
+    "object",
+    "parse",
+    "prop",
+    "property",
+    "update",
+    "value",
+    "write"
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "expand-object"
+      ]
+    }
+  }
+}
