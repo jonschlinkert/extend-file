@@ -1,7 +1,7 @@
 {
   "name": "extend-file",
-  "description": "Extend a JSON file with additional properties, API and CLI.",
-  "version": "0.1.2",
+  "description": "Easily extend a JSON file with additional properties, API and CLI.",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/extend-file",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/extend-file",
@@ -25,10 +25,16 @@
     "test": "mocha"
   },
   "dependencies": {
-    "expand-object": "^0.2.3",
+    "ansi-green": "^0.1.1",
+    "data-store": "^0.8.1",
+    "expand-object": "^0.3.6",
     "minimist": "^1.1.2",
+    "minimist-events": "^0.1.3",
     "mixin-deep": "^1.1.1",
+    "object.pick": "^1.1.1",
     "read-data": "^0.3.0",
+    "set-value": "^0.2.0",
+    "success-symbol": "^0.1.0",
     "write": "^0.2.1"
   },
   "devDependencies": {
