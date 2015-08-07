@@ -2,25 +2,34 @@
 
 /* deps: mocha */
 var should = require('should');
-var extendFile = require('./');
+var extend = require('./');
 
-describe('extendFile', function () {
+describe('extend', function () {
   it('should extend the given file with properties:', function () {
-    var pkg = extendFile('package.json', {foo: 'bar'});
-    pkg.should.have.properties(['name', 'version', 'foo']);
+    var file = extend('package.json', {foo: 'bar'});
+    file.data.should.have.properties(['name', 'version', 'foo']);
+  });
+
+  it('should extend the given file with properties:', function () {
+    var file = extend('package.json', {foo: 'bar'});
+    file.read();
+    file.extend();
+    file.data.should.have.properties(['name', 'version', 'foo']);
+    file.data.should.not.have.property('one');
+    file.extend({one: 'two'});
+    file.data.should.have.property('one');
+    file.data.should.not.have.property('yyy');
+    file.extend({yyy: 'zzz'});
+    file.data.should.have.property('yyy');
   });
 
   it('should throw an error when invalid args are passed:', function () {
     (function () {
-      extendFile();
+      extend('');
     }).should.throw('filepath should be a string.');
 
     (function () {
-      extendFile('');
-    }).should.throw('filepath should be a string.');
-
-    (function () {
-      extendFile('foo', '');
+      extend('foo', '');
     }).should.throw('second argument should be an object.');
   });
 });
